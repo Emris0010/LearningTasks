@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF26FF2A-02F5-417B-A2BF-A4E1EB88C0A9}</ProjectGuid>
+    <ProjectGuid>{2D9634B8-4B97-4819-98D7-ED4DF0C78338}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Sudoku</RootNamespace>
-    <AssemblyName>Sudoku</AssemblyName>
+    <RootNamespace>SudokuOOP</RootNamespace>
+    <AssemblyName>SudokuOOP</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -45,19 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormSudoku.cs">
+    <Compile Include="BusinessLogic\Sudoku.Cell.cs" />
+    <Compile Include="BusinessLogic\Level.cs" />
+    <Compile Include="BusinessLogic\Sudoku.Checker.cs" />
+    <Compile Include="BusinessLogic\Sudoku.Factory.cs" />
+    <Compile Include="CellsPanel.cs" />
+    <Compile Include="CellsPanel.Desiner.cs" />
+    <Compile Include="FormSudokuOOP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSudoku.Designer.cs">
-      <DependentUpon>FormSudoku.cs</DependentUpon>
+    <Compile Include="FormSudokuOOP.Designer.cs">
+      <DependentUpon>FormSudokuOOP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Level.cs" />
+    <Compile Include="BusinessLogic\Sudoku.Data.cs" />
+    <Compile Include="InfraContracts\ISudokuRepo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SudokuChecker.cs" />
-    <Compile Include="SudokuGenerator.cs" />
-    <EmbeddedResource Include="FormSudoku.resx">
-      <DependentUpon>FormSudoku.cs</DependentUpon>
+    <Compile Include="BusinessLogic\Sudoku.cs" />
+    <Compile Include="Infrastructure\SudokuRepo.cs" />
+    <EmbeddedResource Include="FormSudokuOOP.resx">
+      <DependentUpon>FormSudokuOOP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,5 +88,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

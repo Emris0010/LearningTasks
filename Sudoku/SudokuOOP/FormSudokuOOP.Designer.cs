@@ -1,7 +1,7 @@
 ﻿
-namespace Sudoku
+namespace SudokuOOP
 {
-    partial class Form1
+    partial class FormSudokuOOP
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,40 @@ namespace Sudoku
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCheck = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.Location = new System.Drawing.Point(93, 261);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(75, 23);
-            this.btnCheck.TabIndex = 0;
-            this.btnCheck.Text = "Проверка";
-            this.btnCheck.UseVisualStyleBackColor = true;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(12, 261);
+            this.btnNewGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNewGame.Location = new System.Drawing.Point(12, 262);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(75, 23);
-            this.btnNewGame.TabIndex = 1;
+            this.btnNewGame.TabIndex = 3;
             this.btnNewGame.Text = "Новая игра";
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
-            // Form1
+            // btnCheck
+            // 
+            this.btnCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCheck.Location = new System.Drawing.Point(93, 262);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.TabIndex = 2;
+            this.btnCheck.Text = "Проверка";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // FormSudokuOOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 296);
+            this.ClientSize = new System.Drawing.Size(281, 297);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnCheck);
-            this.Name = "Form1";
+            this.Name = "FormSudokuOOP";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -68,8 +70,8 @@ namespace Sudoku
 
         #endregion
 
-        private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button btnCheck;
     }
 }
 

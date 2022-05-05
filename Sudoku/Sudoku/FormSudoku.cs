@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace Sudoku
 {
-    public partial class Form1 : Form
+    public partial class FormSudoku : Form
     {
         private readonly TextBox[,] textboxes = new TextBox[9, 9];
         private readonly string saveFilePath = Path.Combine(Application.StartupPath, "Save.save");
 
-        public Form1()
+        public FormSudoku()
         {
             InitializeComponent();
             RenderField();

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sudoku
+namespace SudokuOOP
 {
     static class Program
     {
@@ -16,7 +13,7 @@ namespace Sudoku
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSudoku());
+            Application.Run(new FormSudokuOOP(new SudokuRepo()));
         }
     }
 }

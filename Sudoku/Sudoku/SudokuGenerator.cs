@@ -21,7 +21,7 @@ namespace Sudoku
             return values;
         }
 
-        static int[,] CreateBaseMatrix()
+        private static int[,] CreateBaseMatrix()
         {
             var mtr = new int[9, 9];
 
@@ -40,7 +40,7 @@ namespace Sudoku
             return mtr;
         }
 
-        static void Mix(int[,] mtr)
+        private static void Mix(int[,] mtr)
         {
             Random rnd = new Random();
             for (int rowNum = 0; rowNum < 100; rowNum++)
@@ -64,7 +64,7 @@ namespace Sudoku
             }
         }
 
-        static int?[,] ToValues(int[,] mtr)
+        private static int?[,] ToValues(int[,] mtr)
         {
             var values = new int?[9, 9];
             for (int rowNum = 0; rowNum < 9; rowNum++)
@@ -73,7 +73,7 @@ namespace Sudoku
             return values;
         }
 
-        static void FillStr(int[,] mtr, int rowNum, int firstValue)
+        private static void FillStr(int[,] mtr, int rowNum, int firstValue)
         {
             for (int colNum = 0; colNum < 9; colNum++)
             {
@@ -83,7 +83,7 @@ namespace Sudoku
             }
         }
 
-        static void ChangeRows(int[,] mtr, int row1, int row2)
+        private static void ChangeRows(int[,] mtr, int row1, int row2)
         {
             for (int colNum = 0; colNum < 9; colNum++)
             {
@@ -93,7 +93,7 @@ namespace Sudoku
             }
         }
 
-        static void ChangeColumns(int[,] mtr, int col1, int col2)
+        private static void ChangeColumns(int[,] mtr, int col1, int col2)
         {
             for (int rowNum = 0; rowNum < 9; rowNum++)
             {
@@ -103,7 +103,7 @@ namespace Sudoku
             }
         }
 
-        static void DeleteSomeValues(int?[,] mtr, Level level)
+        private static void DeleteSomeValues(int?[,] mtr, Level level)
         {
             Random rnd = new Random();
 
