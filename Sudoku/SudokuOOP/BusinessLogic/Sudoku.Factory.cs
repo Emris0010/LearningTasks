@@ -17,20 +17,20 @@ namespace SudokuOOP.BusinessLogic
                 return new Sudoku(ToData(mtr));
             }
 
-            private Data ToData(int[,] mtr)
+            private ValuesForCreate ToData(int[,] mtr)
             {
-                Data.Cell[,] values = new Data.Cell[9, 9];
+                ValuesForCreate.Cell[,] values = new ValuesForCreate.Cell[9, 9];
 
                 for (int rowNum = 0; rowNum < 9; rowNum++)
                     for (int colNum = 0; colNum < 9; colNum++)
                     {
                         if (mtr[rowNum, colNum] == EMPTY_VALUE)
-                            values[rowNum, colNum] = new Data.Cell { IsBaseValue = false };
+                            values[rowNum, colNum] = new ValuesForCreate.Cell { IsBaseValue = false };
                         else
-                            values[rowNum, colNum] = new Data.Cell { IsBaseValue = true, Value = mtr[rowNum, colNum] };
+                            values[rowNum, colNum] = new ValuesForCreate.Cell { IsBaseValue = true, Value = mtr[rowNum, colNum] };
                     }
 
-                return new Data { Values = values };
+                return new ValuesForCreate { Values = values };
             }
 
             private int[,] CreateBaseMatrix()

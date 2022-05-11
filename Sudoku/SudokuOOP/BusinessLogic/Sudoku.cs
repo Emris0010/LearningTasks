@@ -8,7 +8,7 @@
         public bool IsFill => checker.IsFill(cells);
         public bool IsRight => checker.IsRight(cells);
 
-        private Sudoku(Data data)
+        private Sudoku(ValuesForCreate data)
         {
             for (int rowNum = 0; rowNum < 9; rowNum++)
             {
@@ -42,7 +42,7 @@
             return new Factory().CreateNew(level);
         }
 
-        public static Sudoku CreateFromStorage(Data data)
+        public static Sudoku CreateFromStorage(ValuesForCreate data)
         {
             return new Sudoku(data);
         }

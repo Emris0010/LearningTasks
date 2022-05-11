@@ -27,13 +27,13 @@ namespace SudokuOOP
 
         public Sudoku Load()
         {
-            var values = new Sudoku.Data.Cell[9, 9];
+            var values = new Sudoku.ValuesForCreate.Cell[9, 9];
             for (int rowNum = 0; rowNum < 9; rowNum++)
                 for (int colNum = 0; colNum < 9; colNum++)
-                    values[rowNum, colNum] = new Sudoku.Data.Cell { IsBaseValue = false, Value = null };
+                    values[rowNum, colNum] = new Sudoku.ValuesForCreate.Cell { IsBaseValue = false, Value = null };
 
             if (!File.Exists(saveFilePath))
-                return Sudoku.CreateFromStorage(new Sudoku.Data { Values = values });
+                return Sudoku.CreateFromStorage(new Sudoku.ValuesForCreate { Values = values });
 
             var buf = File.ReadAllBytes(saveFilePath);
             using (MemoryStream ms = new MemoryStream(buf))
@@ -46,7 +46,7 @@ namespace SudokuOOP
                         var isBaseValue = br.ReadBoolean();
                         var value = br.ReadInt32();
 
-                        values[rowNum, colNum] = new Sudoku.Data.Cell
+                        values[rowNum, colNum] = new Sudoku.ValuesForCreate.Cell
                         {
                             IsBaseValue = isBaseValue,
                             Value = value == 0 ? null : (int?)value
@@ -55,7 +55,7 @@ namespace SudokuOOP
                 }
             }
 
-            return Sudoku.CreateFromStorage(new Sudoku.Data { Values = values });
+            return Sudoku.CreateFromStorage(new Sudoku.ValuesForCreate { Values = values });
         }
     }
 }

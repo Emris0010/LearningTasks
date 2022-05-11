@@ -2,7 +2,7 @@
 {
     partial class Sudoku
     {
-        public class Data
+        public class ValuesForCreate
         {
             public class Cell
             {
